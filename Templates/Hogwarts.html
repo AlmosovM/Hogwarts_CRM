@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hogwarts CRM</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/crm.css') }}">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div id="container">
+            <div id="inputs">
+                <label><b>First Name</b><br />
+                    <input type="text" name="fname" id="Fname" value="" class="form-control" placeholder="First name">
+                </label>
+                <br />
+
+                <label><b>Last Name</b><br />
+                    <input type="text" name="lname" id="Lname" value="" class="form-control" placeholder="Last name">
+                </label>
+                <br />
+
+                <label><b>Magic skill</b><br />
+
+                    <select name="magicskill" id="magicskill">
+                        <option value="" selected disabled hidden>Choose here</option>
+                        <option id="11" value="Alchemy">Alchemy</option>
+                        <option id="12" value="Animation">Animation</option>
+                        <option id="13" value="Conjuror">Conjuror</option>
+                        <option id="14" value="Disintegration">Disintegration</option>
+                        <option id="15" value="Elemental">Elemental</option>
+                        <option id="16" value="Healing">Healing</option>
+                        <option id="17" value="Illusion">Illusion</option>
+                        <option id="18" value="Immortality">Immortality</option>
+                        <option id="19" value="Invisibility">Invisibility</option>
+                        <option id="20" value="Invulnerability">Invulnerability</option>
+                        <option id="21" value="Necromancer">Necromancer</option>
+                        <option id="22" value="Omnipresent">Omnipresent</option>
+                        <option id="23" value="Omniscient">Omniscient</option>
+                        <option id="24" value="Poison">Poison</option>
+                        <option id="25" value="Possession">Possession</option>
+                        <option id="26" value="Self-detonation">Self-detonation</option>
+                        <option id="27" value="Summoning">Summoning</option>
+                        <option id="28" value="Water breathing">Water breathing</option>
+                    </select>
+                    <label><b>Magic skill level</b><br />
+
+                        <select name="mlevels" id="mlevels">
+                            <option value="" selected disabled hidden>Choose here</option>
+                            <option id="0" value="1">1</option>
+                            <option id="1" value="2">2</option>
+                            <option id="2" value="3">3</option>
+                            <option id="3" value="4">4</option>
+                            <option id="4" value="5">5</option>
+                        </select>
+                    </label>
+                </label>
+                <br />
+
+                <label for="dskills" class="white"><b>Desired Magic skill</b><br />
+
+                    <select name="dskills" id="dskills">
+                        <option value="" selected disabled hidden>Choose here</option>
+                        <option id="101" value="Alchemy">Alchemy</option>
+                        <option id="102" value="Animation">Animation</option>
+                        <option id="103" value="Conjuror">Conjuror</option>
+                        <option id="104" value="Disintegration">Disintegration</option>
+                        <option id="105" value="Elemental">Elemental</option>
+                        <option id="106" value="Healing">Healing</option>
+                        <option id="107" value="Illusion">Illusion</option>
+                        <option id="108" value="Immortality">Immortality</option>
+                        <option id="109" value="Invisibility">Invisibility</option>
+                        <option id="110" value="Invulnerability">Invulnerability</option>
+                        <option id="111" value="Necromancer">Necromancer</option>
+                        <option id="112" value="Omnipresent">Omnipresent</option>
+                        <option id="113" value="Omniscient">Omniscient</option>
+                        <option id="114" value="Poison">Poison</option>
+                        <option id="115" value="Possession">Possession</option>
+                        <option id="116" value="Self-detonation">Self-detonation</option>
+                        <option id="117" value="Summoning">Summoning</option>
+                        <option id="118" value="Water breathing">Water breathing</option>
+                    </select>
+                    <label class="white"><b>Desired Magic skill level</b><br />
+
+                        <select name="dmlevels" id="dmlevels">
+                            <option value="" selected disabled hidden>Choose here</option>
+                            <option id="120" value="1">1</option>
+                            <option id="121" value="2">2</option>
+                            <option id="122" value="3">3</option>
+                            <option id="123" value="4">4</option>
+                            <option id="124" value="5">5</option>
+                        </select>
+                    </label>
+                </label>
+                <br />
+
+                <label class="white"><b>Course</b><br />
+
+                    <select name="courses" id="courses"></option>
+                        <option value="" selected disabled hidden>Choose here</option>
+                        <option id="31" value="Alchemy basics">Alchemy basics</option>
+                        <option id="32" value="Alchemy advanced">Alchemy advanced</option>
+                        <option id="33" value="Magic day-to-day life">Magic day-to-day life</option>
+                        <option id="34" value="Magic medical professionals">Magic medical professionals</option>
+                        <option id="35" value="Dating magic">Dating magic</option>
+                    </select>
+                </label>
+            </div>
+
+
+            <div class="buttons" id='buttons'>
+                <button id="addStudent" type="submit" class="btn btn-default"><b>Add Student</b></button>
+                <button id="getStudent" type="submit" class="btn btn-default"><b>Get Student</b></button>
+                <button id="updateStudent" type="submit" class="btn btn-default"><b>Update Student</b></button>
+                <button id="deleteStudent" type="submit" class="btn btn-default"><b>Delete Student</b></button>
+                <button id="getAllStudents" type="submit" class="btn btn-default"><b>Get All Students</b></button>
+            </div>
+            <div class="buttons" id='dashboard'>
+
+                <button id="RemoveCourse" type="submit" class="btn btn-default"><b>Remove Course</b></button>
+                <button id="RemoveMskill" type="submit" class="btn btn-default"><b>Remove magic skill</b></button>
+                <button id="RemoveDMskill" type="submit" class="btn btn-default"><b>Remove desired magic
+                        skill</b></button>
+
+            </div>
+            <div class="buttons">
+                <button id="student_pie" type="submit" class="btn btn-default"><b>Student Status</b></button>
+                <button id="students_dash" type="submit" class="btn btn-default"><b>Students DashBoard</b></button>
+            </div>
+        </div>
+        <div id="msg">
+            <div id='data'><b> Data</b><br /> </div>
+            <div id="resonse_data">
+            </div>
+        </div>
+    </div>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <script type=text/javascript src="{{url_for('static', filename='js/jquery-3.4.1.js') }}"></script>
+    <script type=text/javascript src="{{url_for('static', filename='js/jscode.js') }}"></script>
+
+
+
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script> -->
+
+    <!-- // <script src="https://code.jquery.com/jquery-3.4.1.js"
+    //     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> -->
+
+
+</body>
+
+</html>

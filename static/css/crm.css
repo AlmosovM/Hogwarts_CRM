@@ -1,0 +1,80 @@
+body{
+    background-image: url('./Hogwarts.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+
+}
+.container-fluid{
+    margin-top: 0.1rem;
+    display: flex;
+    
+}
+#inputs{
+    align-items: center;
+    text-align: center;
+}
+label{
+    font-size: 1.1rem;
+    background: honeydew;
+ width: 260px;
+ display: inline-block;
+ margin-bottom: 5px;
+ padding-top: 5px;   
+}
+
+#msg{
+
+    padding: 0.5rem;
+    width: 38rem;
+    height: 96vh;
+    display: flex;
+    flex-direction: column;
+    word-break:  break-word;
+    
+}
+#resonse_data{
+    width: 100%;
+    height: 87vh;
+    overflow: auto;
+    padding: 0.2rem;
+    background-color: white;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    
+}
+
+.student{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    padding: 1rem;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+#data{
+    font-size: 2rem;
+    text-align: center;
+    margin: 0.5rem;
+    padding: 0.2rem;
+}
+#container{
+    padding: 0.5rem;
+    width: 42rem;
+    height: 96vh;
+    display: flex;
+    flex-direction: column;
+    word-break:  break-word;
+   
+}
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+.skills{
+    font-size: 15px;
+    text-decoration: royalblue;
+    font-weight:Bold;
+}
